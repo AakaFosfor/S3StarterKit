@@ -1,0 +1,194 @@
+# Spartan3 Starter Kit template - constraints (rev E)
+# Aaka Fosfor, 2023
+# https://github.com/AakaFosfor/S3StarterKit
+#
+# state: draft
+
+# Time specifications for 50MHz clock
+# TIMESPEC TS01 = FROM : FFS : TO : FFS : 20 ns;
+# TIMESPEC TS02 = FROM : RAMS : TO : FFS : 20 ns;
+# TIMESPEC TS03 = FROM : FFS : TO : RAMS : 20 ns;
+# TIMESPEC TS04 = FROM : RAMS : TO : RAMS : 20 ns;
+# TIMESPEC TS05 = FROM : FFS : TO : PADS : 20 ns;
+# TIMESPEC TS06 = FROM : PADS : TO : FFS : 20 ns;
+# TIMESPEC TS07 = FROM : PADS : TO : RAMS : 20 ns;
+# TIMESPEC TS08 = FROM : RAMS : TO : PADS : 20 ns;
+
+#
+# I/O constraints
+#
+
+# soldered 50MHz Clock
+NET "Clk50Mhz_ik" PERIOD = 20 ns;
+NET "Clk50Mhz_ik" LOC = T9; # GCLK0
+
+# N8 - GCLK2
+
+# empty socket IC8
+# NET "Gclk4_ik" LOC = D9; # GCLK4
+
+# LEDs
+NET "Led_ob8<0>" LOC = K12;
+NET "Led_ob8<1>" LOC = P14;
+NET "Led_ob8<2>" LOC = L12;
+NET "Led_ob8<3>" LOC = N14;
+NET "Led_ob8<4>" LOC = P13;
+NET "Led_ob8<5>" LOC = N12;
+NET "Led_ob8<6>" LOC = P12;
+NET "Led_ob8<7>" LOC = P11;
+
+# Slide switches
+NET "Switch_ib8<0>" LOC = F12;
+NET "Switch_ib8<1>" LOC = G12;
+NET "Switch_ib8<2>" LOC = H14;
+NET "Switch_ib8<3>" LOC = H13;
+NET "Switch_ib8<4>" LOC = J14;
+NET "Switch_ib8<5>" LOC = J13;
+NET "Switch_ib8<6>" LOC = K14;
+NET "Switch_ib8<7>" LOC = K13;
+
+# Push buttons
+NET "Button_ib4<0>" LOC = M13;
+NET "Button_ib4<1>" LOC = M14;
+NET "Button_ib4<2>" LOC = L13;
+NET "Button_ib4<3>" LOC = L14;
+
+# UART connections to female DB9 connector J2
+# NET "UartTx_o" LOC = R13;
+# NET "UartRx_i" LOC = T13;
+# NET "UartATx_o" LOC = T14;
+# NET "UartARx_i" LOC = N10;
+
+# 7-segment display
+# NET "SegmentAnode_onb4<0>" LOC = D14;
+# NET "SegmentAnode_onb4<1>" LOC = G14;
+# NET "SegmentAnode_onb4<2>" LOC = F14;
+# NET "SegmentAnode_onb4<3>" LOC = E13;
+# NET "Segment_onb8<0>" LOC = E14; # a
+# NET "Segment_onb8<1>" LOC = G13; # b
+# NET "Segment_onb8<2>" LOC = N15; # c
+# NET "Segment_onb8<3>" LOC = P15; # d
+# NET "Segment_onb8<4>" LOC = R16; # e
+# NET "Segment_onb8<5>" LOC = F13; # f
+# NET "Segment_onb8<6>" LOC = N16; # g
+# NET "Segment_onb8<7>" LOC = P16; # dp
+
+# Expansion connector A2
+# NET "ExpansionA2_4" LOC = E6;
+# NET "ExpansionA2_5" LOC = D5;
+# NET "ExpansionA2_6" LOC = C5;
+# NET "ExpansionA2_7" LOC = D6;
+# NET "ExpansionA2_8" LOC = C6;
+# NET "ExpansionA2_9" LOC = E7;
+# NET "ExpansionA2_10" LOC = C7;
+# NET "ExpansionA2_11" LOC = D7;
+# NET "ExpansionA2_12" LOC = C8;
+# NET "ExpansionA2_13" LOC = D8;
+# NET "ExpansionA2_14" LOC = C9; # GCLK5
+# NET "ExpansionA2_15" LOC = D10;
+# NET "ExpansionA2_16" LOC = A3;
+# NET "ExpansionA2_17" LOC = B4;
+# NET "ExpansionA2_18" LOC = A4;
+# NET "ExpansionA2_19" LOC = B5;
+# NET "ExpansionA2_20" LOC = A5;
+# NET "ExpansionA2_21" LOC = B6;
+# NET "ExpansionA2_22" LOC = B7;
+# NET "ExpansionA2_23" LOC = A7;
+# NET "ExpansionA2_24" LOC = B8; # GCLK7
+# NET "ExpansionA2_25" LOC = A8; # GCLK6
+# NET "ExpansionA2_26" LOC = A9;
+# NET "ExpansionA2_27" LOC = B10;
+# NET "ExpansionA2_28" LOC = A10;
+# NET "ExpansionA2_29" LOC = B11;
+# NET "ExpansionA2_30" LOC = B12;
+# NET "ExpansionA2_31" LOC = A12;
+# NET "ExpansionA2_32" LOC = B13;
+# NET "ExpansionA2_33" LOC = A13;
+# NET "ExpansionA2_34" LOC = B14;
+# NET "ExpansionA2_35" LOC = D9;
+# NET "ExpansionA2_36" LOC = B3;
+# NET "ExpansionA2_37" LOC = R14;
+# NET "ExpansionA2_38" LOC = N9;
+# NET "ExpansionA2_39" LOC = T15;
+# NET "ExpansionA2_40" LOC = M11;
+
+# SRAM
+# NET "ram_addr<0>"  LOC = L5;
+# NET "ram_addr<1>"  LOC = N3;
+# NET "ram_addr<2>"  LOC = M4;
+# NET "ram_addr<3>"  LOC = M3;
+# NET "ram_addr<4>"  LOC = L4;
+# NET "ram_addr<5>"  LOC = G4;
+# NET "ram_addr<6>"  LOC = F3;
+# NET "ram_addr<7>"  LOC = F4;
+# NET "ram_addr<8>"  LOC = E3;
+# NET "ram_addr<9>"  LOC = E4;
+# NET "ram_addr<10>" LOC = G5;
+# NET "ram_addr<11>" LOC = H3;
+# NET "ram_addr<12>" LOC = H4;
+# NET "ram_addr<13>" LOC = J4;
+# NET "ram_addr<14>" LOC = J3;
+# NET "ram_addr<15>" LOC = K3;
+# NET "ram_addr<16>" LOC = K5;
+# NET "ram_addr<17>" LOC = L3;
+#
+# NET "ram_we" LOC = G3;
+# NET "ram_oe" LOC = K4;
+#
+# NET "ram_a_data<0>"  LOC = N7;
+# NET "ram_a_data<1>"  LOC = T8;
+# NET "ram_a_data<2>"  LOC = R6;
+# NET "ram_a_data<3>"  LOC = T5;
+# NET "ram_a_data<4>"  LOC = R5;
+# NET "ram_a_data<5>"  LOC = C2;
+# NET "ram_a_data<6>"  LOC = C1;
+# NET "ram_a_data<7>"  LOC = B1;
+# NET "ram_a_data<8>"  LOC = D3;
+# NET "ram_a_data<9>"  LOC = P8; # GCLK3
+# NET "ram_a_data<10>" LOC = F2;
+# NET "ram_a_data<11>" LOC = H1;
+# NET "ram_a_data<12>" LOC = J2;
+# NET "ram_a_data<13>" LOC = L2;
+# NET "ram_a_data<14>" LOC = P1;
+# NET "ram_a_data<15>" LOC = R1;
+#
+# NET "ram_a_ce" LOC = P7;
+# NET "ram_a_lb" LOC = P6;
+# NET "ram_a_ub" LOC = T4;
+#
+# NET "ram_b_data<0>"  LOC = P2;
+# NET "ram_b_data<1>"  LOC = N2;
+# NET "ram_b_data<2>"  LOC = M2;
+# NET "ram_b_data<3>"  LOC = K1;
+# NET "ram_b_data<4>"  LOC = J1;
+# NET "ram_b_data<5>"  LOC = G2;
+# NET "ram_b_data<6>"  LOC = E1;
+# NET "ram_b_data<7>"  LOC = D1;
+# NET "ram_b_data<8>"  LOC = D2;
+# NET "ram_b_data<9>"  LOC = E2;
+# NET "ram_b_data<10>" LOC = G1;
+# NET "ram_b_data<11>" LOC = F5;
+# NET "ram_b_data<12>" LOC = C3;
+# NET "ram_b_data<13>" LOC = K2;
+# NET "ram_b_data<14>" LOC = M1;
+# NET "ram_b_data<15>" LOC = N1;
+#
+# NET "ram_b_ce" LOC = N5;
+# NET "ram_b_lb" LOC = P5;
+# NET "ram_b_ub" LOC = R4;
+
+# XCF02S Serial PROM connections
+# NET "din" LOC = M11;
+# NET "reset_prom" LOC = N9;
+# NET "cclk" LOC = A14;
+
+# VGA DB15 connector J6
+# NET "VgaRed_o" LOC = R12;
+# NET "VgaGreen_o" LOC = T12;
+# NET "VgaBlue_o" LOC = R11;
+# NET "VgaHSync_o" LOC = R9; # GCLK1
+# NET "VgaVSync_o" LOC = T10;
+
+# PS/2 connector J3
+# NET "Ps2Clock_iok" LOC = M16;
+# NET "Ps2Data_io"   LOC = M15;

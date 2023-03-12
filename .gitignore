@@ -1,0 +1,3 @@
+/doc/vendor/*.pdf
+/sim/*.vcd
+/sim/*.cf
