@@ -50,6 +50,8 @@ begin
     
     wait for 10 us;
     stop(0);
+    wait for 1 us;
+    finish;
   end process;
 
 end architecture;
