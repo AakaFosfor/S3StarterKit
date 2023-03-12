@@ -2,7 +2,7 @@
 -- Aaka Fosfor, 2023
 -- https://github.com/AakaFosfor/S3StarterKit
 --
--- state: draft
+-- state: final
 
 library ieee;
 use ieee.std_logic_1164.all;
